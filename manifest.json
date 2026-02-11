@@ -1,0 +1,78 @@
+{
+  "manifest_version": 3,
+  "name": "X Translate Studio 11",
+  "version": "11.0.0",
+  "description": "X Translate 11.0: 液态玻璃 UI、扩展引擎矩阵、智能路由优化。",
+  "permissions": ["storage", "activeTab", "permissions"],
+  "optional_host_permissions": ["https://*/*", "http://*/*"],
+  "host_permissions": [
+    "https://translate.googleapis.com/*",
+    "https://clients5.google.com/*",
+    "https://api.mymemory.translated.net/*",
+    "https://lingva.ml/*",
+    "https://api.openai.com/*",
+    "https://api.deepseek.com/*",
+    "https://open.bigmodel.cn/*",
+    "https://dashscope.aliyuncs.com/*",
+    "https://api.moonshot.cn/*",
+    "https://api.baichuan-ai.com/*",
+    "https://api.minimax.chat/*",
+    "https://api.minimaxi.com/*",
+    "https://api.anthropic.com/*",
+    "https://generativelanguage.googleapis.com/*",
+    "https://api.groq.com/*",
+    "https://api.mistral.ai/*",
+    "https://api.together.xyz/*",
+    "https://api.fireworks.ai/*",
+    "https://api.perplexity.ai/*",
+    "https://api.x.ai/*",
+    "https://api.deepinfra.com/*",
+    "https://api.siliconflow.cn/*",
+    "https://api.cognitive.microsofttranslator.com/*",
+    "https://libretranslate.de/*",
+    "https://translate.astian.org/*",
+    "https://translate.fedilab.app/*",
+    "https://api.cohere.ai/*",
+    "https://api.cerebras.ai/*",
+    "https://api.sambanova.ai/*",
+    "https://api.novita.ai/*",
+    "https://api.hyperbolic.xyz/*",
+    "https://api.lepton.ai/*",
+    "https://api.01.ai/*",
+    "https://api.stepfun.com/*",
+    "https://api.lingyiwanwu.com/*",
+    "https://api.hunyuan.cloud.tencent.com/*",
+    "https://ark.cn-beijing.volces.com/*",
+    "https://translate.terraprint.co/*",
+    "https://libretranslate.com/*",
+    "https://lt.vern.cc/*",
+    "https://translate.argosopentech.com/*",
+    "https://x.com/*",
+    "https://twitter.com/*"
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png"
+    },
+    "default_title": "X Translate Studio 11"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://x.com/*", "https://twitter.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
